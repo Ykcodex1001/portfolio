@@ -70,27 +70,43 @@ p {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 99px;
 }
 .card button a {
     color: white;
     text-decoration: none;
 }
-
-#skills {
-    padding: 40px 20px;
-    background-color: #333;
-    text-align: center;
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-li {
-    margin: 10px 0;
+.skills-section {
+  padding: 20px;
+  background-color: #121212;
+  color: #fff;
+  font-family: Arial, sans-serif;
 }
 
+.skills-section h2 {
+  color: #800080;
+  font-size: 20px;
+  margin-top: 20px;
+}
 
+.skill-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 20px 0;
+}
+
+.skill-box span {
+  background-color: #2b2b2b;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+.icon {
+  margin-right: 8px;
+  color: #800080;
+}
 #contact {
     padding: 40px 20px;
     text-align: center;
