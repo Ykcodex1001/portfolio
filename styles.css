@@ -218,6 +218,7 @@ header {
       color: white;
     }
 .intro {
+    background-color:#000000;
     text-align: center;
     padding: 20px;
 }
