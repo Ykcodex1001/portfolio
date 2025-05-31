@@ -18,15 +18,6 @@ body {
             position: relative;
         }
 
-        #projects h2 {
-            font-size: 3rem;
-            margin-bottom: 50px;
-            background: linear-gradient(90deg, #d30ad3, #7a0ba5);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: fadeIn 1s ease forwards;
-        }
-
         .projects-container {
             display: flex;
             flex-wrap: wrap;
