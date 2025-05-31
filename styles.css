@@ -303,7 +303,8 @@ p {
 .h2{
     
     font-size: 3rem;
-    margin: 2px 10px;
+    margin-bottom: 25px;
+    
     
 }
 .h2p{
@@ -314,7 +315,7 @@ p {
 .h2c{
     
     font-size: 2rem;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 #certificates {
   padding: 40px 20px;
