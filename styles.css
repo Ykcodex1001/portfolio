@@ -107,6 +107,13 @@ body {
             #projects h2 {
                 font-size: 2rem;
             }
+            #contact h2 {
+                font-size: 2rem;
+            }
+            #certificates h2 {
+                font-size: 2rem;
+            }
+            
             .card {
                 padding: 20px;
             }
