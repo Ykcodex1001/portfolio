@@ -6,10 +6,120 @@
       scroll-behavior: smooth;
 }
 body {
-    background-color: #000;
-    color: white;
-    line-height: 1.6;
+ background: radial-gradient(ellipse at top, #1a1a2e, #0f0f1b);
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ color: #ffffff;
+ overflow-x: hidden;
+ line-height: 1.6;
 }
+#projects {
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        #projects h2 {
+            font-size: 3rem;
+            margin-bottom: 50px;
+            background: linear-gradient(90deg, #d30ad3, #7a0ba5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 350px;
+            width: 90%;
+            box-shadow: 0 0 25px rgba(211, 10, 211, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        .card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 0 35px rgba(211, 10, 211, 0.4);
+        }
+
+        .card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #ff70f2, #c04aff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .card button {
+            background: linear-gradient(135deg, #d30ad3, #7a0ba5);
+            color: white;
+            padding: 12px 26px;
+            border: none;
+            font-size: 1rem;
+            font-weight: bold;
+            font-family: inherit;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 0 10px rgba(211, 10, 211, 0.3);
+        }
+
+        .card button:hover {
+            background: linear-gradient(135deg, #b009b0, #5a0474);
+            transform: scale(1.05);
+        }
+
+        .card button a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @media (max-width: 768px) {
+            #projects h2 {
+                font-size: 2rem;
+            }
+            .card {
+                padding: 20px;
+            }
+ }
 header {
       background-color: #1f1f1f;
       padding: 15px 20px;
@@ -136,35 +246,6 @@ p {
     color: #bbb;
 }
 
-
-#projects {
-    padding: 40px 20px;
-    background-color: #222;
-    text-align: center;
-}
-.card {
-    background-color: #333;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
-}
-.card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-.card button {
-    background-color:#d30ad3;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    font-family: Arial, sans-serif;
-    cursor: pointer;
-    border-radius: 99px;
-}
-.card button a {
-    color: white;
-    text-decoration: none;
-}
 .skills-section {
   padding: 20px;
   background-color: #121212;
