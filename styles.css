@@ -305,6 +305,12 @@ p {
     font-size: 3rem;
     margin-bottom: 50px;
 }
+.h2c{
+    border-radius: 10px;
+    border: 1px solid white;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
 #certificates {
   padding: 40px 20px;
   background-color: #111;
