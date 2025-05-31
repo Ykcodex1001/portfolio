@@ -53,7 +53,7 @@ header {
     }
 
     nav ul li a:hover {
-      background-color: #a78bfa;
+      background-color: #d30ad3;
       color: #1f1f1f;
     }
 
@@ -98,7 +98,7 @@ header {
       right: 30px;
       width: 45px;
       height: 45px;
-      background-color: #a78bfa;
+      background-color:  #d30ad3;
       color: #1f1f1f;
       border: none;
       border-radius: 50%;
@@ -113,7 +113,7 @@ header {
     }
 
     #backToTop:hover {
-      background-color: #8b5cf6;
+      background-color: #d30ad3;
       color: white;
     }
 .intro {
@@ -153,7 +153,7 @@ p {
     margin-bottom: 10px;
 }
 .card button {
-    background-color: #800080;
+    background-color:#d30ad3;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -197,22 +197,29 @@ p {
   color: #800080;
 }
 #contact {
-    padding: 40px 20px;
-    text-align: center;
-}
-#contact a {
-    color: #d30ad3;
-    text-decoration: none;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-footer {
-    background-color: #222;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+#contact ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
 }
+
+#contact ul li div {
+  font-size: 30px;
+  cursor: pointer;
+  color: #d30ad3;
+  transition: color 0.3s ease;
+}
+
+#contact ul li div:hover {
+  color: #8b5cf6;
+}
+
 .h2{
     border-radius: 10px;
     margin: 2px 10px;
