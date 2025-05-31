@@ -317,15 +317,6 @@ p {
   direction: rtl;
 }
 
-#certificates h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  padding: 2px 30px;
-  border-bottom: 2px solid #8b5cf6;
-  display: inline-block;
-  padding-bottom: 8px;
-}
-
 .certificate {
   margin-bottom: 30px;
 }
