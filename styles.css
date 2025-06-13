@@ -153,10 +153,7 @@
             transform: scale(1.05);
         }
         
-        .card-content {
-            padding: 25px;
-            position: relative;
-        }
+        
         
         .card-title {
             font-size: 1.75rem;
@@ -174,23 +171,11 @@
             line-height: 1.6;
         }
 
-        .tech-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
-            position: relative;
-        }
+        
 
         .login-details {
             padding: 15px;
             line-height: 1.8;
-        }
-
-        .tech-stack {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
         }
         
         .tech-item {
@@ -202,43 +187,7 @@
             border: 1px solid rgba(233, 30, 99, 0.3);
         }
         
-        .open-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #d30ad3, #7a0ba5);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: none;
-            cursor: pointer;
-            z-index: 20;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(123, 31, 162, 0.4);
-        }
-
-        .open-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(123, 31, 162, 0.6);
-        }
-
-        .open-btn svg {
-            width: 18px;
-            height: 18px;
-            color: white;
-            transition: all 0.3s ease;
-        }
-
-        .skills-section {
-            padding: 20px;
-            background-color: #121212;
-            color: #fff;
-            font-family: Arial, sans-serif;
-        }
-
+        
         .skills-section h2 {
             color: #800080;
             font-size: 20px;
@@ -402,4 +351,56 @@
                 right: 15px;
             }
         }
+/* تعديل موضع وتصميم أيقونة الفتح */
+.open-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #d30ad3, #7a0ba5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(123, 31, 162, 0.4);
+}
+
+.open-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(123, 31, 162, 0.6);
+}
+
+.open-btn svg {
+    width: 18px;
+    height: 18px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* تعديل تنسيق صف التقنيات */
+.tech-row {
+    display: flex;
+    justify-content: flex-end; /* محاذاة لليمين */
+    margin-top: 20px;
+    position: relative;
+    padding-right: 50px; /* إفساح مجال للأيقونة */
+}
+
+.tech-stack {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-right: auto; /* دفع العناصر لليسار */
+}
+
+.card-content {
+    padding: 25px;
+    position: relative;
+    padding-bottom: 30px; /* تعديل المساحة السفلية */
+}
     
