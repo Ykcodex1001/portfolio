@@ -39,70 +39,98 @@ body {
             transform: translateY(30px);
             animation: fadeInUp 1s forwards;
         }
-
-        .card:nth-child(2) {
-            animation-delay: 0.3s;
-        }
-        .card:nth-child(3) {
-            animation-delay: 0.6s;
-        }
-
+        
         .card:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 0 0 35px rgba(211, 10, 211, 0.4);
         }
-
-        .card h3 {
+        
+        .card-logo {
+            width: 100%;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .card-logo img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(211, 10, 211, 0.5));
+        }
+        
+        .card-title {
             font-size: 1.75rem;
             margin-bottom: 15px;
             background: linear-gradient(90deg, #ff70f2, #c04aff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-align: center;
         }
-
-        .card p {
+        
+        .card-description {
             font-size: 1rem;
             color: #ccc;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            line-height: 1.6;
         }
-
-        .card button {
-            background: linear-gradient(135deg, #d30ad3, #7a0ba5);
-            color: white;
-            padding: 12px 26px;
-            border: none;
-            font-size: 1rem;
-            font-weight: bold;
-            font-family: inherit;
-            cursor: pointer;
+        
+        .tech-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .tech-item {
+            background: rgba(123, 31, 162, 0.2);
+            color: #e1bee7;
+            padding: 6px 12px;
             border-radius: 50px;
-            transition: background 0.3s ease, transform 0.2s ease;
+            font-size: 0.85rem;
+            border: 1px solid rgba(233, 30, 99, 0.3);
+        }
+        
+        .open-btn {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #d30ad3, #7a0ba5);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
             box-shadow: 0 0 10px rgba(211, 10, 211, 0.3);
         }
-
-        .card button:hover {
+        
+        .open-btn:hover {
             background: linear-gradient(135deg, #b009b0, #5a0474);
-            transform: scale(1.05);
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(211, 10, 211, 0.5);
         }
-
-        .card button a {
-            color: inherit;
-            text-decoration: none;
-            display: block;
+        
+        .open-btn svg {
+            width: 18px;
+            height: 18px;
+            color: white;
         }
-
+        
         @keyframes fadeInUp {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-
         @media (max-width: 768px) {
             #projects h2 {
                 font-size: 2rem;
