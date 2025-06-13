@@ -112,23 +112,24 @@
             gap: 40px;
         }
 
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 0;
-            max-width: 350px;
-            width: 90%;
-            box-shadow: 0 0 25px rgba(211, 10, 211, 0.2);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s forwards;
-            overflow: hidden;
-            position: relative;
+        .open-btn {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(123, 31, 162, 0.3);
         }
-        
         .card:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 0 0 35px rgba(211, 10, 211, 0.4);
