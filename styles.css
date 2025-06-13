@@ -132,9 +132,7 @@
 }
 
 /* تعديلات تنسيقية إضافية */
-.card-content {
-    padding-bottom: 70px;
-}
+
 
 .tech-row {
     margin-bottom: 10px; 
@@ -162,9 +160,9 @@
         }
         
         .card-content {
-            padding: 25px;
-            position: relative;
-            margin-top: 10px;
+    padding: 25px;
+    position: relative;
+    padding-bottom: 30px; /* تعديل المساحة السفلية */
         }
         
         .card-title {
@@ -183,15 +181,15 @@
             line-height: 1.6;
         }
 
-        .tech-row {
+.tech-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    margin-bottom: 60px; /* زيادة المساحة السفلية */
     position: relative;
-    padding-right: 50px; 
+    padding-right: 0; /* إزالة الحشو الزائد */
 }
-
 
         .login-details {
             
@@ -200,10 +198,10 @@
         }
 
         .tech-stack {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: flex-start;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-right: 60px; /* إفساح مجال للأيقونة */
         }
         
         .tech-item {
@@ -215,10 +213,10 @@
             border: 1px solid rgba(233, 30, 99, 0.3);
         }
         
-.open-btn {
+..open-btn {
     position: absolute;
     bottom: 20px;
-    right: 70px; /* تغيير من left إلى right */
+    right: 20px;
     width: 45px;
     height: 45px;
     background: rgba(255, 255, 255, 0.95);
@@ -234,7 +232,6 @@
     box-shadow: 0 4px 15px rgba(123, 31, 162, 0.3);
 }
 
-/* تعديل تأثير التحويم */
 .open-btn:hover {
     background: #7a0ba5;
     transform: scale(1.1); /* إزالة translateY(-50%) */
