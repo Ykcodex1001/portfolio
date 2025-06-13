@@ -113,27 +113,23 @@
         }
 
         .card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 0;
-    max-width: 350px;
-    width: 90%;
-    box-shadow: 0 0 25px rgba(211, 10, 211, 0.3); /* زيادة شدة الظل قليلاً */
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    overflow: hidden;
-    position: relative;
-    padding-top: 15px;
-}
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 0;
+            max-width: 350px;
+            width: 90%;
+            box-shadow: 0 0 25px rgba(211, 10, 211, 0.3);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            overflow: hidden;
+            position: relative;
+        }
 
-.card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 0 35px rgba(211, 10, 211, 0.5); /* زيادة شدة الظل عند التحويم */
-}
-
-
-
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 0 35px rgba(211, 10, 211, 0.5);
+        }
         
         .card-logo {
             position: relative;
@@ -141,8 +137,7 @@
             height: 200px;
             overflow: hidden;
             border-radius: 20px;
-            
-               margin-top: 10px;
+            margin: 15px 0 0;
         }
         
         .card-logo img {
@@ -151,6 +146,7 @@
             object-fit: cover;
             object-position: center;
             transition: transform 0.5s ease;
+            border-radius: 20px;
         }
 
         .card:hover .card-logo img {
@@ -158,9 +154,8 @@
         }
         
         .card-content {
-    padding: 25px;
-    position: relative;
-    padding-bottom: 30px; /* تعديل المساحة السفلية */
+            padding: 25px;
+            position: relative;
         }
         
         .card-title {
@@ -179,28 +174,23 @@
             line-height: 1.6;
         }
 
-.tech-row {
-       margin-top: 15px;
-    padding-right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    margin-bottom: 60px; /* زيادة المساحة السفلية */
-    position: relative;
-}
+        .tech-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            position: relative;
+        }
 
         .login-details {
-            
             padding: 15px;
             line-height: 1.8;
         }
 
         .tech-stack {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-right: 60px; /* إفساح مجال للأيقونة */
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
         }
         
         .tech-item {
@@ -212,36 +202,35 @@
             border: 1px solid rgba(233, 30, 99, 0.3);
         }
         
-.open-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #d30ad3, #7a0ba5);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-    z-index: 20;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(123, 31, 162, 0.4);
-}
+        .open-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #d30ad3, #7a0ba5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            z-index: 20;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(123, 31, 162, 0.4);
+        }
 
-.open-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(123, 31, 162, 0.6);
-}
+        .open-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(123, 31, 162, 0.6);
+        }
 
-.open-btn svg {
-    width: 18px;
-    height: 18px;
-    color: white;
-    transition: all 0.3s ease;
-}
-
+        .open-btn svg {
+            width: 18px;
+            height: 18px;
+            color: white;
+            transition: all 0.3s ease;
+        }
 
         .skills-section {
             padding: 20px;
@@ -410,7 +399,7 @@
                 width: 40px;
                 height: 40px;
                 top: 15px;
-                left: 15px;
+                right: 15px;
             }
         }
     
