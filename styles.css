@@ -30,7 +30,7 @@ body {
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            padding: 30px;
+            padding: 0;
             max-width: 350px;
             width: 90%;
             box-shadow: 0 0 25px rgba(211, 10, 211, 0.2);
@@ -38,6 +38,7 @@ body {
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 1s forwards;
+            overflow:hidden;
         }
         
         .card:hover {
@@ -47,17 +48,19 @@ body {
         
         .card-logo {
             width: 100%;
-            height: 100px;
+            height: 180px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 0;
+           border-radius: 20px 20px 0 0;  
         }
         
         .card-logo img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
+            border-radius:0;
             filter: drop-shadow(0 0 10px rgba(211, 10, 211, 0.5));
         }
         
@@ -76,19 +79,23 @@ body {
             margin-bottom: 25px;
             line-height: 1.6;
         }
-        
+        .card-content {
+    padding: 25px;
+        }
         .tech-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
-        }
-        
-        .tech-stack {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    order: 2; 
+}
         
         .tech-item {
             background: rgba(123, 31, 162, 0.2);
@@ -111,6 +118,9 @@ body {
             transition: all 0.3s ease;
             border: none;
             box-shadow: 0 0 10px rgba(211, 10, 211, 0.3);
+              order: 1; 
+    margin-left: 0;
+    margin-right: auto;
         }
         
         .open-btn:hover {
