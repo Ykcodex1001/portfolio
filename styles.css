@@ -101,6 +101,8 @@ body {
     gap: 10px;
     flex-wrap: wrap;
     order: 2; 
+    margin-top:20px;
+    padding-right:0;  
 }
         
         .tech-item {
@@ -112,35 +114,41 @@ body {
             border: 1px solid rgba(233, 30, 99, 0.3);
         }
         
-        .open-btn {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #d30ad3, #7a0ba5);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-            box-shadow: 0 0 10px rgba(211, 10, 211, 0.3);
-              order: 1; 
-    margin-left: 0;
-    margin-right: auto;
-        }
-        
-        .open-btn:hover {
-            background: linear-gradient(135deg, #b009b0, #5a0474);
-            transform: scale(1.1);
-            box-shadow: 0 0 15px rgba(211, 10, 211, 0.5);
-        }
-        
-        .open-btn svg {
-            width: 18px;
-            height: 18px;
-            color: white;
-        }
-        
+       
+.card {
+  position: relative; 
+}
+
+.open-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.open-btn:hover {
+  transform: scale(1.1);
+  background: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.open-btn svg {
+  width: 20px;
+  height: 20px;
+  color: #6e48aa;
+}
+
         @keyframes fadeInUp {
             to {
                 opacity: 1;
