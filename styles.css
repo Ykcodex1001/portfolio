@@ -89,7 +89,13 @@ body {
     align-items: center;
     margin-top: 20px;
 }
-
+.login-details {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-right: 3px solid #d30ad3;
+  line-height: 1.8;
+}
 .tech-stack {
     display: flex;
     gap: 10px;
