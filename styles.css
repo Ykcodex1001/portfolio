@@ -113,7 +113,6 @@
         }
 
         .card {
-    
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -121,16 +120,25 @@
     padding: 0;
     max-width: 350px;
     width: 90%;
-    box-shadow: 0 0 25px rgba(211, 10, 211, 0.2);
+    box-shadow: 0 0 25px rgba(211, 10, 211, 0.3); /* زيادة شدة الظل قليلاً */
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     overflow: hidden;
     position: relative;
-        }
+}
 
-        .card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 0 35px rgba(211, 10, 211, 0.4);
-        }
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 35px rgba(211, 10, 211, 0.5); /* زيادة شدة الظل عند التحويم */
+}
+
+/* تعديلات تنسيقية إضافية */
+.card-content {
+    padding-bottom: 70px;
+}
+
+.tech-row {
+    margin-bottom: 10px; 
+}
         
         .card-logo {
             position: relative;
@@ -207,10 +215,10 @@
             border: 1px solid rgba(233, 30, 99, 0.3);
         }
         
-        .open-btn {
+.open-btn {
     position: absolute;
-    bottom: 20px; 
-    right: 20px; 
+    bottom: 20px;
+    right: 20px; /* تغيير من left إلى right */
     width: 45px;
     height: 45px;
     background: rgba(255, 255, 255, 0.95);
@@ -224,12 +232,14 @@
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(123, 31, 162, 0.3);
-        }
+}
 
+/* تعديل تأثير التحويم */
 .open-btn:hover {
     background: #7a0ba5;
-    transform: translateY(-50%) scale(1.1);
+    transform: scale(1.1); /* إزالة translateY(-50%) */
 }
+
 
 .open-btn:hover svg {
     color: white;
