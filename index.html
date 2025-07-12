@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROUBACHE YOUNE</title>
+    <meta name="description" content="Portfolio of Younes Roubache - Full Stack Developer specializing in React, Bootstrap, PHP, and creative design tools">
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Y R</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight">Younes Roubache</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        <span class="highlight">Web Developer</span> & <span class="highlight">Creative Designer</span>
+                    </p>
+                    <p class="hero-description">
+                        I build modern web applications using Html,css,js,React, Bootstrap, and PHP. 
+                        With additional expertise in Photoshop, video editing, and bot creation,
+                        I deliver complete digital solutions with both technical and creative excellence.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class='bx bx-code-alt'></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class='bx bx-chat'></i> Hire Me
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-img-container">
+                        <img src="profile.jpg" alt="Younes Roubache" class="profile-img">
+                        <div class="floating-icons">
+                            <i class='bx bxl-react'></i>
+                            <i class='bx bxl-bootstrap'></i>
+                            <i class='bx bxl-adobe'></i>
+                            <i class='bx bx-bot'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <!-- Web Development -->
+                <div class="skill-category">
+                    <h3>Web Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class='bx bxl-react'></i>
+                            <span>React.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class='bx bxl-bootstrap'></i>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class='bx bxl-javascript'></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class='bx bxl-php'></i>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design & Media -->
+                <div class="skill-category">
+                    <h3>Design & Media</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class='bx bxl-adobe'></i>
+                            <span>Photoshop</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class='bx bx-video'></i>
+                            <span>Video Editing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Automation -->
+                <div class="skill-category">
+                    <h3>AI & Automation</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class='bx bx-bot'></i>
+                            <span>Bot Creation</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class='bx bx-brain'></i>
+                            <span>AI Integration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database & Tools -->
+                <div class="skill-category">
+                    <h3>Database & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class='bx bx-data'></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class='bx bxl-git'></i>
+                            <span>Git/GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+             
+              <div class="project-card">
+            <button class="open-btn" onclick="window.open('https://ykcodex1001.github.io/boycott-site/', '_blank')">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+            </button>
+            <div class="project-image">
+                <img src="p1.jpg" alt="Boycott Awareness Platform">
+            </div>
+            <div class="project-content">
+                <h3>Boycott Awareness Platform</h3>
+                <p>A youth awareness platform highlighting the importance of boycott as a tool of peaceful resistance, organized digitally and effectively.</p>
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card">
+            <button class="open-btn" onclick="window.open('http://ecomarket.byethost12.com', '_blank')">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+            </button>
+            <div class="project-image">
+                <img src="p5.jpg" alt="EcoMarket E-Commerce">
+            </div>
+            <div class="project-content">
+                <h3>EcoMarket E-Commerce</h3>
+                <p>An online store for various products with user information storage, order confirmation and other services.</p>
+                <div class="project-tech">
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="project-card">
+            <button class="open-btn" onclick="window.open('https://ecomarket.wuaze.com/admin.php', '_blank')">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+            </button>
+            <div class="project-image">
+                <img src="p2.jpg" alt="EcoMarket Admin Dashboard">
+            </div>
+            <div class="project-content">
+                <h3>EcoMarket Admin Dashboard</h3>
+                <p>Complete management system for EcoMarket with product control, returns, orders and users management with integrated messaging system.</p>
+                <div class="login-details">
+                    <strong>Demo Access:</strong><br>
+                    👤: younesroubache04<br>
+                    🔐: 24052004*
+                </div>
+                <div class="project-tech">
+                    <span>PHP</span>
+                    <span>Bootstrap</span>
+                    <span>MySQL</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="project-card">
+            <button class="open-btn" onclick="window.open('https://t.me/Tecfixerbot', '_blank')">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+            </button>
+            <div class="project-image">
+                <img src="p4.jpg" alt="TecFixer AI Bot">
+            </div>
+            <div class="project-content">
+                <h3>TecFixer AI Bot</h3>
+                <p>AI-powered customer support bot connected to social media platforms to solve user problems through AI-powered conversations.</p>
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>AI</span>
+                    <span>NLP</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Project 5 -->
+        <div class="project-card">
+            <button class="open-btn" onclick="window.open('https://cdn.botpress.cloud/webchat/v2.5/shareable.html?configUrl=https://files.bpcontent.cloud/2025/05/09/10/20250509104323-UIXXN4OR.json', '_blank')">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+            </button>
+            <div class="project-image">
+                <img src="p3.jpg" alt="AI Support Chat Interface">
+            </div>
+            <div class="project-content">
+                <h3>AI Support Chat Interface</h3>
+                <p>ChatGPT-like interface designed to improve website usability by providing information and answering user queries.</p>
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>AI</span>
+                    <span>Web Integration</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Project 6 -->
+        <div class="project-card">
+            <button class="open-btn" onclick="window.open('https://ykcodex1001.github.io/medquiz/', '_blank')">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+            </button>
+            <div class="project-image">
+                <img src="p6.png" alt="Medical Quiz App">
+            </div>
+            <div class="project-content">
+                <h3>Medical Quiz App</h3>
+                <p>Interactive web application offering multiple-choice questions in the medical field, helping users test their medical knowledge.</p>
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Project 7 -->
+        <div class="project-card">
+            <button class="open-btn" onclick="window.open('https://ecomarket.wuaze.com', '_blank')">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+            </button>
+            <div class="project-image">
+                <img src="p7.jpg" alt="EcoMarket Responsive Store">
+            </div>
+            <div class="project-content">
+                <h3>EcoMarket Responsive Store</h3>
+                <p>Responsive e-commerce store for Algerian users with easy product browsing interface and dedicated store management system.</p>
+                <div class="project-tech">
+                    <span>Bootstrap</span>
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                </div>
+            </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="certificates" id="certificates">
+        <div class="container">
+            <h2 class="section-title">My Certificates</h2>
+            <div class="certificates-grid">
+                <div class="certificate-item">
+                    <img src="c1.jpg" alt="Outstanding Organizer Certificate">
+                    <h3>Outstanding Organizer Certificate</h3>
+                </div>
+                <div class="certificate-item">
+                    <img src="c2.jpg" alt="HTML Certificate">
+                    <h3>HTML Completion Certificate</h3>
+                </div>
+                <div class="certificate-item">
+                    <img src="c3.png" alt="CSS Certificate">
+                    <h3>CSS Completion Certificate</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together!</h3>
+                    <p>I'm open to new opportunities and collaborations</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class='bx bx-envelope'></i>
+                            <span>younesroubache20@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://t.me/TanhidCodex0001" target="_blank" class="social-link">
+                            <i class='bx bxl-telegram'></i>
+                        </a>
+                        <a href="https://github.com/Ykcodex1001" target="_blank" class="social-link">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/roubache-younes-564b50366" target="_blank" class="social-link">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
