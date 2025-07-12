@@ -260,6 +260,34 @@ body {
         transform: translateY(-20px);
     }
 }
+    .open-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #02dcfd, #7a0ba5);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        z-index: 20;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(123, 31, 162, 0.4);
+    }
+    
+    .open-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(123, 31, 162, 0.6);
+    }
+    
+    .open-btn svg {
+        width: 18px;
+        height: 18px;
+        color: white;
+    }
 
 /* Section Styles */
 section {
