@@ -686,9 +686,8 @@ section {
         font-size: 0.9rem;
     }
 }
-/* Add these to your existing CSS */
 
-/* New Skill Icons */
+
 .bxl-react { color: #61dafb; }
 .bxl-bootstrap { color: #7952b3; }
 .bxl-adobe { color: #ff0000; }
@@ -696,7 +695,7 @@ section {
 .bx-brain { color: #FFC107; }
 .bx-video { color: #E91E63; }
 
-/* Enhanced Project Cards */
+
 .project-card {
     position: relative;
     overflow: hidden;
@@ -708,13 +707,13 @@ section {
     box-shadow: 0 15px 30px rgba(211, 10, 211, 0.3);
 }
 
-/* Skill Categories Animation */
+
 .skill-category:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* Responsive Grid for Skills */
+
 @media (min-width: 768px) {
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
