@@ -49,6 +49,23 @@ const animateOnScroll = () => {
         }
     });
 };
+document.addEventListener("DOMContentLoaded", () => {
+  const sliders = document.querySelectorAll(".slider");
+  
+  sliders.forEach(slider => {
+    const images = slider.querySelectorAll("img");
+    let index = 0;
 
+    function showNextImage() {
+      images[index].classList.remove("active");
+      index = (index + 1) % images.length;
+      images[index].classList.add("active");
+    }
+
+    images[index].classList.add("active");
+    setInterval(showNextImage, 3000); 
+  });
+});
 window.addEventListener('scroll', animateOnScroll);
 window.addEventListener('load', animateOnScroll);
+
