@@ -49,23 +49,68 @@ const animateOnScroll = () => {
         }
     });
 };
-document.addEventListener("DOMContentLoaded", () => {
-  const sliders = document.querySelectorAll(".slider");
-  
-  sliders.forEach(slider => {
-    const images = slider.querySelectorAll("img");
-    let index = 0;
-
-    function showNextImage() {
-      images[index].classList.remove("active");
-      index = (index + 1) % images.length;
-      images[index].classList.add("active");
-    }
-
-    images[index].classList.add("active");
-    setInterval(showNextImage, 3000); 
-  });
-});
 window.addEventListener('scroll', animateOnScroll);
 window.addEventListener('load', animateOnScroll);
+document.addEventListener("DOMContentLoaded", () => {
+  const sliders = document.querySelectorAll(".slider");
+
+  sliders.forEach(slider => {
+    const images = slider.querySelectorAll("img");
+    const prevBtn = slider.querySelector(".prev");
+    const nextBtn = slider.querySelector(".next");
+    const dotsContainer = slider.querySelector(".dots");
+    let index = 0;
+    let interval;
+
+    // إنشاء النقاط
+    images.forEach((_, i) => {
+      const dot = document.createElement("span");
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => goToImage(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll("span");
+
+    function updateSlider() {
+      images.forEach(img => img.classList.remove("active"));
+      dots.forEach(dot => dot.classList.remove("active"));
+      images[index].classList.add("active");
+      dots[index].classList.add("active");
+    }
+
+    function showNextImage() {
+      index = (index + 1) % images.length;
+      updateSlider();
+    }
+
+    function showPrevImage() {
+      index = (index - 1 + images.length) % images.length;
+      updateSlider();
+    }
+
+    function goToImage(i) {
+      index = i;
+      updateSlider();
+    }
+
+    function startAutoSlide() {
+      interval = setInterval(showNextImage, 3000);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(interval);
+    }
+
+    prevBtn.addEventListener("click", () => { showPrevImage(); stopAutoSlide(); startAutoSlide(); });
+    nextBtn.addEventListener("click", () => { showNextImage(); stopAutoSlide(); startAutoSlide(); });
+
+    slider.addEventListener("mouseenter", stopAutoSlide);
+    slider.addEventListener("mouseleave", startAutoSlide);
+
+    updateSlider();
+    startAutoSlide();
+  });
+});
+
 
