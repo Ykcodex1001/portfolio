@@ -784,5 +784,25 @@ section {
   background: #ff9800;
 }
 
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  .features-list li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+  }
+  .features-list i {
+    color: #8A2BE2;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1.1rem;
+    width: 24px;
+    text-align: center;
+  }
 
 
