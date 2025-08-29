@@ -11,7 +11,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+ <div class="game-overlay" id="gameOverlay">
+     <div class="game-container">
+         <h2 class="game-title">Memory Challenge</h2>
+         <p style="margin-bottom: 20px; color: #b3b3b3;">Find matching tech icons to enter the portfolio</p>
+         <div class="game-board" id="gameBoard"></div>
+         <div class="game-stats">
+             <div>Moves: <span id="moves">0</span></div>
+             <div>Time: <span id="timer">0</span>s</div>
+         </div>
+         <button class="skip-game" onclick="skipGame()">Skip Game</button>
+     </div>
+ </div>
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -611,6 +622,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
