@@ -1,18 +1,4 @@
-:root {
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    --dark-bg: #0a0a0a;
-    --darker-bg: #050505;
-    --card-bg: #1a1a1a;
-    --text-primary: #ffffff;
-    --text-secondary: #b3b3b3;
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --neon-blue: #00d4ff;
-    --neon-purple: #8a2be2;
-    --neon-pink: #ff006e;
-}
+
 * {
     margin: 0;
     padding: 0;
@@ -818,8 +804,7 @@ section {
     width: 24px;
     text-align: center;
   }
-
-/* Loading Game Screen */
+/* Memory Game styles (مقتطفات مهمة) */
 .game-overlay {
     position: fixed;
     top: 0;
@@ -834,27 +819,30 @@ section {
     flex-direction: column;
     transition: opacity 1s ease-out, visibility 1s ease-out;
 }
+
 .game-overlay.hidden {
     opacity: 0;
     visibility: hidden;
 }
+
 .game-container {
     text-align: center;
     padding: 40px;
-    background: var(--glass-bg);
+    background: rgba(255,255,255,0.03);
     backdrop-filter: blur(20px);
     border-radius: 20px;
-    border: 1px solid var(--glass-border);
+    border: 1px solid rgba(255,255,255,0.08);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
 }
+
 .game-title {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    background: var(--accent-gradient);
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
+
 .game-board {
     display: grid;
     grid-template-columns: repeat(4, 100px);
@@ -862,10 +850,11 @@ section {
     margin: 30px auto;
     justify-content: center;
 }
+
 .game-card {
     width: 100px;
     height: 100px;
-    background: var(--card-bg);
+    background: #1a1a1a;
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -876,51 +865,68 @@ section {
     position: relative;
     overflow: hidden;
 }
+
 .game-card:hover {
     transform: translateY(-5px);
-    border-color: var(--neon-blue);
-    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+    border-color: rgba(0, 212, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.12);
 }
+
 .game-card.flipped {
-    background: var(--primary-gradient);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     transform: rotateY(180deg);
 }
+
 .game-card.matched {
-    background: var(--secondary-gradient);
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     animation: glow 1s ease-in-out;
 }
+
 .card-icon {
     font-size: 2rem;
-    color: var(--text-primary);
+    color: #fff;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 .game-card.flipped .card-icon,
 .game-card.matched .card-icon {
     opacity: 1;
 }
+
 .game-stats {
     display: flex;
     justify-content: space-around;
     margin: 20px 0;
     font-size: 1.2rem;
 }
+
 .skip-game {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    color: var(--text-primary);
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: #fff;
     padding: 12px 30px;
     border-radius: 50px;
     cursor: pointer;
     margin-top: 20px;
     transition: all 0.3s ease;
 }
+
 .skip-game:hover {
-    background: var(--primary-gradient);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     transform: scale(1.05);
 }
+
 @keyframes glow {
     0%, 100% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.3); }
     50% { box-shadow: 0 0 40px rgba(102, 126, 234, 0.8); }
 }
+
+/* Responsive: احرص أن تقلل أبعاد البطاقات على الشاشات الصغيرة */
+@media (max-width: 480px) {
+    .game-board { grid-template-columns: repeat(4, 70px); gap: 8px; }
+    .game-card { width: 70px; height: 70px; border-radius: 12px; }
+    .card-icon { font-size: 1.4rem; }
+}
+
 
