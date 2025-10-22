@@ -276,6 +276,76 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
+// سلايدر مخصص لمشروع Artghoni فقط
+class ArtghoniSlider {
+  constructor(container) {
+    this.container = container;
+    this.slides = container.querySelectorAll('.artghoni-phone');
+    this.dotsContainer = container.querySelector('.dots');
+    this.prevBtn = container.querySelector('.arrow.prev');
+    this.nextBtn = container.querySelector('.arrow.next');
+    this.currentSlide = 0;
+    
+    this.init();
+  }
+  
+  init() {
+    // إنشاء النقاط
+    this.slides.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => this.goToSlide(index));
+      this.dotsContainer.appendChild(dot);
+    });
+    
+    // إضافة event listeners
+    this.prevBtn.addEventListener('click', () => this.prevSlide());
+    this.nextBtn.addEventListener('click', () => this.nextSlide());
+    
+    // التمرير التلقائي
+    this.startAutoSlide();
+    
+    // إيقاف التمرير التلقائي عند التوقف
+    this.container.addEventListener('mouseenter', () => this.stopAutoSlide());
+    this.container.addEventListener('mouseleave', () => this.startAutoSlide());
+  }
+  
+  goToSlide(index) {
+    this.slides[this.currentSlide].classList.remove('active');
+    this.dotsContainer.children[this.currentSlide].classList.remove('active');
+    
+    this.currentSlide = index;
+    
+    this.slides[this.currentSlide].classList.add('active');
+    this.dotsContainer.children[this.currentSlide].classList.add('active');
+  }
+  
+  nextSlide() {
+    const next = (this.currentSlide + 1) % this.slides.length;
+    this.goToSlide(next);
+  }
+  
+  prevSlide() {
+    const prev = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+    this.goToSlide(prev);
+  }
+  
+  startAutoSlide() {
+    this.autoSlideInterval = setInterval(() => this.nextSlide(), 4000);
+  }
+  
+  stopAutoSlide() {
+    clearInterval(this.autoSlideInterval);
+  }
+}
 
+// تهيئة السلايدر لمشروع Artghoni فقط
+document.addEventListener('DOMContentLoaded', () => {
+  const artghoniSlider = document.querySelector('.artghoni-screenshots');
+  if (artghoniSlider) {
+    new ArtghoniSlider(artghoniSlider);
+  }
+});
 
 
