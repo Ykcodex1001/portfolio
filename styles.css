@@ -929,25 +929,6 @@ section {
     .card-icon { font-size: 1.4rem; }
 }
 
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 25px 0;
-}
-
-.project-tech span {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-}
 
 
 
