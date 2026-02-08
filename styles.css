@@ -14,7 +14,7 @@ body {
     background-color: #121212;
     color: #ffffff;
     line-height: 1.6;
-    overflow-x: hidden;
+   overflow-x: auto;
 }
 
 .container {
@@ -928,3 +928,4 @@ section {
     .game-card { width: 70px; height: 70px; border-radius: 12px; }
     .card-icon { font-size: 1.4rem; }
 }
+
