@@ -112,108 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
     startAutoSlide();
   });
 });
-// Memory Game Logic
-const gameIcons = ['bxl-react', 'bxl-javascript', 'bxl-css3', 'bxl-html5', 'bxl-php', 'bxl-bootstrap', 'bx-bot', 'bx-data'];
-let gameCards = [...gameIcons, ...gameIcons];
-let flippedCards = [];
-let matchedPairs = 0;
-let moves = 0;
-let timer = 0;
-let gameTimer;
-
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-function createGameBoard() {
-    const gameBoard = document.getElementById('gameBoard');
-    gameBoard.innerHTML = ''; // تأكد مسح أي محتوى سابق
-    shuffleArray(gameCards);
-    
-    gameCards.forEach((icon, index) => {
-        const card = document.createElement('div');
-        card.className = 'game-card';
-        card.innerHTML = `<i class='bx ${icon} card-icon'></i>`;
-        card.addEventListener('click', () => flipCard(card, icon, index));
-        gameBoard.appendChild(card);
-    });
-
-    // reset stats
-    matchedPairs = 0;
-    moves = 0;
-    timer = 0;
-    document.getElementById('moves').textContent = moves;
-    document.getElementById('timer').textContent = timer;
-
-    startTimer();
-}
-
-function flipCard(cardElement, icon, index) {
-    if (flippedCards.length === 2 || cardElement.classList.contains('flipped') || cardElement.classList.contains('matched')) {
-        return;
-    }
-
-    cardElement.classList.add('flipped');
-    flippedCards.push({ element: cardElement, icon, index });
-
-    if (flippedCards.length === 2) {
-        moves++;
-        document.getElementById('moves').textContent = moves;
-        checkMatch();
-    }
-}
-
-function checkMatch() {
-    const [card1, card2] = flippedCards;
-    
-    if (card1.icon === card2.icon) {
-        setTimeout(() => {
-            card1.element.classList.add('matched');
-            card2.element.classList.add('matched');
-            matchedPairs++;
-            
-            if (matchedPairs === gameIcons.length) {
-                setTimeout(() => {
-                    endGame();
-                }, 500);
-            }
-            
-            flippedCards = [];
-        }, 500);
-    } else {
-        setTimeout(() => {
-            card1.element.classList.remove('flipped');
-            card2.element.classList.remove('flipped');
-            flippedCards = [];
-        }, 1000);
-    }
-}
-
-function startTimer() {
-    clearInterval(gameTimer);
-    gameTimer = setInterval(() => {
-        timer++;
-        document.getElementById('timer').textContent = timer;
-    }, 1000);
-}
-
-function endGame() {
-    clearInterval(gameTimer);
-    setTimeout(() => {
-        document.getElementById('gameOverlay').classList.add('hidden');
-        document.body.style.overflow = 'auto';
-    }, 1000);
-}
-
-function skipGame() {
-    clearInterval(gameTimer);
-    document.getElementById('gameOverlay').classList.add('hidden');
-    document.body.style.overflow = 'auto';
-}
 
 // Navigation functionality (إذا أردت إعادة استخدامه)
 const navLinks = document.querySelectorAll('.nav-link');
@@ -245,11 +143,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Initialize game when page loads
-document.addEventListener('DOMContentLoaded', () => {
-    document.body.style.overflow = 'hidden';
-    createGameBoard();
-});
 
 // Scroll animations (إذا كنت تستخدمها في موقعك)
 const observerOptions = {
@@ -276,3 +169,4 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
+
